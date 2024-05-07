@@ -18,6 +18,6 @@ SELECT
     ,orders_id
     ,pdt_id
     ,revenue
-    ,purchase_price
+    ,purchase_cost
     ,ROUND((revenue-purchase_cost),2) AS margin
 FROM cost
