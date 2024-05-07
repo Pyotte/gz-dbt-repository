@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: gz_raw_data
+    description: raw data of Greenweeeeeeeeeez
+    tables:
+      - name: sales
+        identifer: raw_gz_sales
+        description: sales list
+      - name: product
+        identifier: raw_gz_product
+        description: products list
+      - name: ship
+        identifier: raw_gz_ship
+        description: ship cost
