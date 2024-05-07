@@ -8,9 +8,45 @@ sources:
       - name: sales
         identifier: raw_gz_sales
         description: sales list
+        columns:
+          - name: date_date
+            description: the date of purchase
+          - name: orders_id
+            description: number of the order
+            tests:
+              - unique
+              - not_null
+          - name: pdt_id
+            description: unique product id
+          - name: revenue
+            description: turnover's product
+          - name: quantity
+            description: quantity per order/product
+          - name: primary_key_sales
+            description: clé primaire
       - name: product
         identifier: raw_gz_product
         description: products list
+        columns:
+          - name: products_id
+            description: unique product id
+            tests:
+              - unique
+              - not_null
+          - name: Purchase_price
+            description: cost of the product
       - name: ship
         identifier: raw_gz_ship
         description: ship cost
+        columns:
+          - name: orders_id
+            description: number of the order
+            tests:
+              - unique
+              - not_null
+          - name: shipping_fee
+            description: fee of the shipping
+          - name: logCost
+            description: log cost
+          - name: ship_cost
+            description: ship cost
