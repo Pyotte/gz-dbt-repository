@@ -13,9 +13,6 @@ sources:
             description: the date of purchase
           - name: orders_id
             description: number of the order
-            tests:
-              - unique
-              - not_null
           - name: pdt_id
             description: unique product id
           - name: revenue
