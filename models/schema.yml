@@ -6,7 +6,7 @@ sources:
     description: raw data of Greenweeeeeeeeeez
     tables:
       - name: sales
-        identifer: raw_gz_sales
+        identifier: raw_gz_sales
         description: sales list
       - name: product
         identifier: raw_gz_product
