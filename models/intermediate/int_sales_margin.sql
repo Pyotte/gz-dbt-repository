@@ -18,5 +18,6 @@ JOIN {{ ref('stg_raw__product') }} AS product
     ,revenue
     ,quantity
     ,purchase_price
+    ,purchase_cost
     ,ROUND((revenue-purchase_cost),2) AS margin
 FROM purchase
