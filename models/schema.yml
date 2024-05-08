@@ -47,3 +47,46 @@ sources:
             description: log cost
           - name: ship_cost
             description: ship cost
+      - name: adwords
+        identifier: raw_gz_adwords
+        description: adwords cost
+      - name: bing
+        identifier: raw_gz_bing
+        description: bing cost
+      - name: criteo
+        identifier: raw_gz_criteo
+        description: criteo cost
+      - name: facebook
+        identifier: raw_gz_facebook
+        description: facebook cost
+
+models:
+  - name: int_campaign
+    tests:
+      - unique:
+          column_name: "(date_date || '-' || paid_source || '-' || campaign_key)"
+      - not_null:
+          column_name:
+            - date_date
+            - paid_source
+            - campaign_key
+            - campaign_name
+            - ads_cost
+            - impression
+            - click
+  - name: int_campaigns_days
+    tests:
+      - unique:
+          column_name: date_date
+      - not_null:
+          column_name: date_date
+  - name: finance_campaigns_days
+    tests:
+      - unique:
+          column_name: date_date
+      - not_null:
+          column_name: date_date
+      
+
+  
+
